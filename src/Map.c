@@ -35,7 +35,7 @@ void* mapGet(Map *map, char *key)
     return NULL;
 }
 
-void mapPut(Map *map, char *key, void *val, size_t len)
+void *mapGet(Map *map, char *key, void *val, size_t len)
 {
     int keylen = strlen(key);
     size_t h = hash_func(key) % map->size;

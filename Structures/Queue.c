@@ -22,3 +22,14 @@ Queue *queueInit()
     queue->end = NULL;
     return queue;
 }
+
+void queuePush(Queue *queue, void *item){
+    QueueNode *node;
+    node = (QueueNode *)malloc(sizeof (QueueNode));
+    node->data = item;
+    QueueNode *start = queue->start;
+    node->next = start;
+    queue->start = node;
+    return;
+
+}

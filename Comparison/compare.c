@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <string.h>
-#include "CompString.h"
+#include "compare.h"
 
 int stringEqual(void *str1, void *str2)
 {

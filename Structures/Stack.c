@@ -1,9 +1,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stddef.h>
-#include "Stack.h"
+#include "stack.h"
 
-Stack *initStack()
+Stack *StackInit()
 {
     Stack *stack = (Stack *)malloc(sizeof(Stack));
     StackNode *node = (StackNode *)malloc(sizeof(StackNode));
@@ -13,7 +13,7 @@ Stack *initStack()
     return stack;
 }
 
-void stackPush(Stack *stack, void *item)
+void StackPush(Stack *stack, void *item)
 {
     StackNode *data = (StackNode *)malloc(sizeof StackNode);
     data->data = item;
@@ -23,7 +23,7 @@ void stackPush(Stack *stack, void *item)
     return;
 }
 
-void *stackPop(Stack *stack)
+void *StackPop(Stack *stack)
 {
     StackNode *item;
     item = stack->first;
@@ -34,7 +34,7 @@ void *stackPop(Stack *stack)
     return value;
 }
 
-void *stackPeak(Stack *stack)
+void *StackPeak(Stack *stack)
 {
     StackNode *item;
     item = stack->first;
@@ -43,7 +43,7 @@ void *stackPeak(Stack *stack)
     return value;
 }
 
-void stackFree(Stack *stack)
+void StackFree(Stack *stack)
 {
     StackNode *current;
     StackNode *next;

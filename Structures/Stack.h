@@ -11,8 +11,8 @@ typedef struct Stack {
     StackNode *start;
 } Stack;
 
-Stack *initStack();
-void stackPush(Stack *stack, void *item);
-void *stackPop(Stack *stack);
-void stackPeek(Stack *stack);
-void stackFree(Stack *stack);
+Stack *StackInit();
+void StackPush(Stack *stack, void *item);
+void *StackPop(Stack *stack);
+void StackPeek(Stack *stack);
+void StackFree(Stack *stack);

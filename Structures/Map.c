@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include "Map.h"
 
-Map *mapInit(unsigned length)
+Map *MapInit(unsigned length)
 {
     if (length == 0) length = 89;
     int i;
@@ -20,7 +20,7 @@ Map *mapInit(unsigned length)
     return map
 }
 
-void* mapGet(Map *map, char *key)
+void* MapGet(Map *map, char *key)
 {
     if (key==NULL) return NULL;
     size_t h = hash_func(key) % map->size;
@@ -35,7 +35,7 @@ void* mapGet(Map *map, char *key)
     return NULL;
 }
 
-void *mapGet(Map *map, char *key, void *val, size_t len)
+void *MapGet(Map *map, char *key, void *val, size_t len)
 {
     int keylen = strlen(key);
     size_t h = hash_func(key) % map->size;

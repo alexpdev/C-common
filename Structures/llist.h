@@ -25,7 +25,7 @@ typedef struct LList {
 
 
 Node *newNode(void *data, int size);
-void LLshow(Node *node);
-void LL_append(LList *list, Node *next);
-void LL_delete(LList *list, Node *node);
-void LL_destroy(LList *list);
+void LListShow(Node *node);
+void LListAppend(LList *list, Node *next);
+void LListDelete(LList *list, Node *node);
+void LListDestroy(LList *list);

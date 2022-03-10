@@ -17,7 +17,7 @@ Node *emptyNode()
     return (Node *)malloc(sizeof(Node));
 }
 
-void LLshow(Node *node)
+void LListShow(Node *node)
 {
     Node *current = node;
     if(!node) return;
@@ -27,14 +27,14 @@ void LLshow(Node *node)
     }
 }
 
-void LL_append(LList *list, Node *next)
+void LListAppend(LList *list, Node *next)
 {
     Node *last_node = list->end;
     last_node->next = next;
 }
 
 
-void LL_delete(LList *list, Node *node)
+void LListDelete(LList *list, Node *node)
 {
     Node *previous = top;
     Node *current = top->next;
@@ -51,7 +51,7 @@ void LL_delete(LList *list, Node *node)
     }
 }
 
-void LL_destroy(LList *list)
+void LListDestroy(LList *list)
 {
     Node *next;
     Node *current = top;

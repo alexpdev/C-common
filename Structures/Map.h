@@ -16,19 +16,12 @@ typedef struct Map {
     size_t length;
 } Map;
 
-
-Map *mapInit(unsigned length);
-
-void mapPut(Map *map, char *key, void *val, size_t len);
-
-void *mapGet(Map *map, char *key);
-
-void mapRemove(Map *map, char *key);
-
+Map *MapInit(unsigned length);
+void MapPut(Map *map, char *key, void *val, size_t len);
+void *MapGet(Map *map, char *key);
+void MapRemove(Map *map, char *key);
 size_t hash_func(char *key);
-
-void mapFree(Map *map);
-
-void mapExpand(Map *map,  size_t length);
+void MapFree(Map *map);
+void MapExpand(Map *map, size_t length);
 
 #endif

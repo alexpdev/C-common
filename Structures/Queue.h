@@ -6,10 +6,10 @@
 typedef struct Queue _Queue;
 typedef struct QueueNode _QueueNode;
 
-Queue *queueInit();
-void *queuePop(Queue *queue);
-void *queuePeek(Queue *queue);
-void queuePush(Queue *queue, void *value);
-void queueFree(Queue *queue);
+Queue *QueueInit();
+void *QueuePop(Queue *queue);
+void *QueuePeek(Queue *queue);
+void QueuePush(Queue *queue, void *value);
+void QueueFree(Queue *queue);
 
 #endif

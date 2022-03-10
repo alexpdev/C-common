@@ -3,10 +3,10 @@
 #include "list.h"
 
 
-List *listInit(unsigned length)
+List *PListInit(unsigned length)
 {
     // Create a new specified length list with no elements.
-    List *list;
+    PList *list;
     if (length <= 0)
         length = 12;
     list = (List *) malloc(sizeof List);
@@ -23,7 +23,7 @@ List *listInit(unsigned length)
 }
 
 
-void listFree(List *list)
+void PListFree(PList *list)
 {
     // Free the memory allocated to the list
     if (list != NULL)
@@ -34,7 +34,7 @@ void listFree(List *list)
 }
 
 
-bool listExpand(List *list)
+bool PListExpand(PList *list)
 {
     // Expand capacity of list
     unsigned capacity;
@@ -48,7 +48,7 @@ bool listExpand(List *list)
 }
 
 
-bool listInsert(List *list, unsigned index, Val value)
+bool PListInsert(PList *list, unsigned index, Val value)
 {
     // insert value at a specific index within the list
     if (index > list->length) return false;
@@ -72,14 +72,14 @@ bool listInsert(List *list, unsigned index, Val value)
 }
 
 
-bool listAppend(List *list, Val value)
+bool PListAppend(PList *list, Val value)
 {
     // add element to end of the list;
     return listInsert(list, list->length, value);
 }
 
 
-int listIndex(List *list, Val val, ValCompFunc func)
+int PListIndex(PList *list, Val val, ValCompFunc func)
 {
     // find the index of a particular element within list.
     for (int i=0; i < list->length; i++)
@@ -91,7 +91,7 @@ int listIndex(List *list, Val val, ValCompFunc func)
 }
 
 
-bool listDelete(List *list, unsigned index)
+bool PListDelete(PList *list, unsigned index)
 {
     // delete element at specific index of the array.
     if (index > list->length) return false;
@@ -104,7 +104,7 @@ bool listDelete(List *list, unsigned index)
 }
 
 
-bool listRemove(List *list, Val value, ValCompFunc func)
+bool PListRemove(PList *list, Val value, ValCompFunc func)
 {
     // remove the first index of the list where the value equals specified val.
     int index;
@@ -114,7 +114,7 @@ bool listRemove(List *list, Val value, ValCompFunc func)
 }
 
 
-Val listPop(List list)
+Val PListPop(PList list)
 {
     // remove last element of list and return it.
     Val value;
@@ -125,7 +125,7 @@ Val listPop(List list)
 }
 
 
-void listReset(List list)
+void PListReset(PList list)
 {
     // Empty the provided list
     list->length = 0;

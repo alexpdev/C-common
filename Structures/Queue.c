@@ -13,7 +13,7 @@ struct _Queue {
     QueueNode *end;
 }
 
-Queue *queueInit()
+Queue *QueueInit()
 {
     Queue *queue;
     queue = (Queue *)malloc(sizeof(Queue))
@@ -23,7 +23,7 @@ Queue *queueInit()
     return queue;
 }
 
-void queuePush(Queue *queue, void *item){
+void QueuePush(Queue *queue, void *item){
     QueueNode *node;
     node = (QueueNode *)malloc(sizeof (QueueNode));
     node->data = item;

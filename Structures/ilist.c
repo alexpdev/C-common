@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include "ilist.h"
 
-
+// Integer List
 IList* IListInitN(int n){
     IList *list = malloc(sizeof(iList));
     int capacity = n + 1;

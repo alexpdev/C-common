@@ -2,7 +2,7 @@
 #define MAP_H
 
 #include <stdlib.h>
-#include <list.h>
+#include "llist.h"
 
 typedef struct MapItem {
     char *key;
